@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'BigNoodleTitling';
+    src: url('../fonts/BigNoodleTitling.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BigNoodleTitling.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BigNoodleTitling.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BigNoodleTitling.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BigNoodleTitling.svg#BigNoodleTitling') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #C0312B;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main-obj {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home-page {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 350px;
+    margin: 0 auto;
+}
+
+#home-title {
+    width: 100%;
+    max-width: 580px;
+    height: 100%;
+    font-size: 115px;
+    font-family: 'BigNoodleTitling';
+    color: #FFFFFF;
+    float: left;
+    border-right: #FFFFFF solid 1px;
+    overflow: hidden;
+}
+
+#home-title > p {
+    margin: 0;
+    margin-top: 75px;
+    margin-left: 10px;
+}
+
+#login-box {
+    width: 100%;
+    max-width: 310px;
+    height: 100%;
+    float: left;
+    /*display: flex;
+    align-items: center;*/
+    padding-top: 32px;
+    overflow: hidden;
+}
+
+#login-form {
+    margin-left: 38px;
+    position: relative;
+}
+
+#choice-action {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.input-txt {
+    width: 100%;
+    font-size: 28px;
+    font-family: 'BigNoodleTitling';
+    background-color: transparent;
+    border: none;
+    border-bottom: #FFFFFF solid 1px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+#forgot-link {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+#btn-login {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #C0312B;
+    background-color: #FFFFFF;
+    margin-top: 25px;
+    border: none;
+    border-radius: 25px;
+    float: right;
+    cursor: pointer;
+}
+
+#btn-register {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #C0312B;
+    background-color: #FFFFFF;
+    margin-top: 25px;
+    border: none;
+    border-radius: 25px;
+    float: right;
+    cursor: pointer;
+}
+
+#form-login {
+    width: 100%;
+    position: absolute;
+    display: block;
+    opacity: 1;
+}
+
+#form-regis {
+    width: 100%;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    left: -100px;
+}
