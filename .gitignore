@@ -1,0 +1,5 @@
+# macOS Fork
+*.DS_Store
+
+# spesifik folder
+learning/
