@@ -10,39 +10,68 @@
 
 </head>
 <body>
-    <main id="main-obj">
-        <section id="home-page">
+    <div id="home-obj">
+        <div id="home-page">
             <div id="home-title">
                 <p>PANDUAN LAPOR</p>
             </div>
             <div id="login-box">
                 <div id="login-form">
                     <p id="choice-action"><span id="login-action">Login</span> or <span id="regis-action">Register</span></p>
-                    <form id="form-login">
-                        <input class='input-txt' name='username-lg' type='text' placeholder='Username' />
+                    <p id="reset-pass-details">Please specified your information below. Your password will be sent to your email.</p>
+                    <div id="form-login">
+                        <input class='input-txt' name='username-lg' type='email' placeholder='Username' />
                         <input class='input-txt' name='usernik-lg' type='text' placeholder='NIK' />
                         <input class='input-txt' name='userpassword-lg' type='password' placeholder='Password' />
                         <label id='forgot-link'>forgot password?</label>
                         <button type='submit' id="btn-login">LOGIN</button>
-                    </form>
-                    <form id="form-regis">
+                    </div>
+                    <div id="form-regis">
                         <input class='input-txt' name='username-rg' type='text' placeholder='Username' />
                         <input class='input-txt' name='usernik-rg' type='text' placeholder='NIK' />
+                        <input class='input-txt' name='useremail-rg' type='email' placeholder='Email' />
                         <input class='input-txt' name='userpassword-rg' type='password' placeholder='Password' />
                         <button type='submit' id="btn-register">REGISTER</button>
-                    </form>
+                    </div>
+                    <div id="form-restore">
+                        <input class='input-txt' name='username-rt' type='text' placeholder='Username' />
+                        <input class='input-txt' name='usernik-rt' type='text' placeholder='NIK' />
+                        <input class='input-txt' name='useremail-rt' type='email' placeholder='Email' />
+                        <label id='cancel-reset-pass'>Cancel</label>
+                        <button type='submit' id="btn-restore">RESET PASSWORD</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!--<section id="menu-page">
-
-        </section>-->
-    </main>
+    <div id="menu-obj">
+        <div id="top-section">
+            <div id="top-container">
+                <div id="top-box">
+                    <div id="top-title">
+                        <p>PANDUAN LAPOR</p>
+                    </div>
+                    <div id="top-welcome">
+                        <p>Selamat datang di<br>Portal E-Learning LAPOR</p>
+                    </div>
+                    <div id="top-details">
+                        <p>Portal E-Learning LAPOR menyediakan modul-modul pembelajaran bagi Admin Instansi dan Pejabat Penghubung mengenai cara mengelola laporan masyarakat pada sistem LAPOR.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-section">
+            <div id="bottom-title">
+                <p>MODUL-MODUL PEMBELAJARAN</p>
+            </div>
+            <div id="bottom-box">
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="js/Draggable.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
