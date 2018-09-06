@@ -71,7 +71,7 @@ a {
     height: 100vh;
     display: flex;
     align-items: center;
-    display: none;
+    overflow: hidden;
 }
 
 #home-page {
@@ -217,8 +217,10 @@ a {
 /* Menu Page */
 #menu-obj {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    display: none;
 }
 
 #top-section {
@@ -226,8 +228,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    /*display: absolute;*/
-    display: none;
+    position: absolute;
     background-color: #FFFFFF;
 }
 
@@ -284,7 +285,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    display: absolute;
+    position: absolute;
     background-color: #d88a86;
 }
 
@@ -295,8 +296,215 @@ a {
     padding-top: 50px;
     color: #FFFFFF;
     font-family: 'BigNoodleTitling';
+    position: absolute;
 }
 
 #bottom-title > p {
     margin-top: 0;
+}
+
+#bottom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#bottom-box {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.row-box {
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    float: left;
+}
+
+.col-box-1 {
+    width: calc(calc(100% / 5) - 10px);
+    margin: 5px;
+    float: left;
+}
+
+.col-box-2 {
+    width: calc(calc(calc(100% / 5) * 2) - 10px);
+    margin: 5px;
+    float: left;
+}
+
+.col-box-3 {
+    width: calc(calc(calc(100% / 5) * 3) - 10px);
+    margin: 5px;
+    float: left;
+}
+
+.col-box-4 {
+    width: calc(calc(calc(100% / 5) * 4) - 10px);
+    margin: 5px;
+    float: left;
+}
+
+.squere-box {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+}
+
+.half-horizontal-squere-box {
+    width: 130px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.squere-box-3 {
+    width: calc(143px * 3);
+    height: 130px;
+    margin: 0 auto;
+}
+
+.mini-squere-box {
+    width: calc(calc(130px / 2) - 5px);
+    height: calc(calc(130px / 2) - 5px);
+    margin: 0 auto;
+    float: left;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-right-5 {
+    margin-right: 5px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.red-box {
+    background-color: #C0312B;
+}
+
+.yellow-box {
+    background-color: #f7c966;
+}
+
+#scroll-btn {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #C0312B;
+    border-radius: 25px;
+    position: fixed;
+    z-index: 100;
+}
+
+#arrow-obj {
+    top: 6px;
+    left: 12px;
+    width: 25px;
+    height: 25px;
+    border-left: #FFFFFF solid 2px;
+    border-bottom: #FFFFFF solid 2px;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-45deg);
+    position: absolute;
+}
+/* Menu Page End */
+
+/* Modul Choose Page */
+#modul-obj {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+}
+
+#modul-header {
+    top: 0;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+}
+
+#close-box {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-right: 15px;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+#cross-1 {
+    width: 50px;
+    border: solid 1px #ffffff;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-45deg);
+    position: absolute;
+}
+
+#cross-2 {
+    width: 50px;
+    border: solid 1px #ffffff;
+    transform-origin: 50% 50%;
+    transform: rotateZ(45deg);
+    position: absolute;
+}
+
+#modul-choose {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#modul-choose-box {
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#modul-choose-icon {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    float: left;
+    border-right: solid 1px #FFFFFF;
+}
+
+#modul-choose-text {
+    width: 220px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+#modul-choose-text > p {
+    font-size: 26px;
+    color: #ffffff;
+    line-height: 50px;
+    font-family: 'Roboto';
+    font-weight: bold;
 }

@@ -77,5 +77,26 @@ function showResetPassForm() {
 }
 
 //logic for form button goes here
+document.getElementById('btn-login').addEventListener('click', function() {
+    TweenMax.set('#menu-obj', { display: 'block'});
+    TweenMax.to('#menu-obj', 0.5, { opacity: 1 });
+    TweenMax.to('#home-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#home-obj', { display: 'none' }) }});
+});
 
 //default for menu page functions
+document.getElementById('box-01').addEventListener('click', function() {
+    TweenMax.set('#modul-obj', { display: 'block'});
+    TweenMax.to('#modul-obj', 0.5, { opacity: 1, backgroundColor: '#C0312B'});
+    TweenMax.to('#menu-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#menu-obj', { display: 'none' }) }});
+});
+
+document.getElementById('scroll-btn').addEventListener('click', function() {
+    TweenMax.to(window, 1, {scrollTo: { y: 700, autoKill: true }, ease: Power3.easeOut });
+});
+
+//default fot modul choose page functions
+document.getElementById('close-box').addEventListener('click', function() {
+    TweenMax.set('#menu-obj', { display: 'block'});
+    TweenMax.to('#menu-obj', 0.5, { opacity: 1 });
+    TweenMax.to('#modul-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#modul-obj', { display: 'none' }) }});
+});
