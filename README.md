@@ -1,11 +1,10 @@
 # LAPOR LEARNING PORTAL
 
-This is just HTML page for LAPOR eLearning menu. Write with html, css, js and php.
+This is just simple web page for LAPOR eLearning menu. Write with html, css, js and php.
 
 ### Library in Use
-1. GreenSock JavaScript Library / GSAP (TweenMax).
-2. jQuery
-3. Bootstrap
+1. [MetroUI](http://metroui.org.ua/)
+2. [jQuery](https://jquery.com/)
 
 ### Database in Use 
 1. mySQL / mariaDB

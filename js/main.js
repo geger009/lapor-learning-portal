@@ -1,102 +1,46 @@
-//default for home page functions
-var formState = "login";
+var scrollBtnState = 'down';
 
-document.getElementById('login-action').style.cursor = 'pointer';
-document.getElementById('regis-action').style.cursor = 'pointer';
-document.getElementById('forgot-link').style.cursor = 'pointer';
-document.getElementById('cancel-reset-pass').style.cursor = 'pointer';
-document.getElementById('login-action').addEventListener('click', showLoginForm);
-document.getElementById('regis-action').addEventListener('click', showRegistForm);
-document.getElementById('forgot-link').addEventListener('click', showResetPassForm);
-document.getElementById('cancel-reset-pass').addEventListener('click', showLoginForm);
-
-function showLoginForm() {
-    TweenMax.set('#form-login', { display: 'block' });
-    TweenMax.to('#form-login', .3, { opacity: 1, left: '0px' });
-    switch (formState) {
-        case 'regist':
-        {
-            TweenMax.to('#form-regis', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-regis', { display: 'none' }); formState = 'login'; } });
-        }
-        break;
-        case 'restore':
-        {
-            TweenMax.to('#reset-pass-details', .3, { opacity: 0, onComplete: function() { 
-                TweenMax.set('#reset-pass-details', { display: 'none' }); 
-                TweenMax.set('#choice-action', { display: 'block' });
-                TweenMax.to('#choice-action', .3, { opacity: 1 });
-            } });
-            TweenMax.to('#form-restore', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-restore', { display: 'none' }); formState = 'login'; } });
-        }
-        break;
-    }
-}
-
-function showRegistForm() {
-    TweenMax.set('#form-regis', { display: 'block' });
-    TweenMax.to('#form-regis', .3, { opacity: 1, left: '0px' });
-    switch (formState) {
-        case 'login':
-        {
-            TweenMax.to('#form-login', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-login', { display: 'none' }); formState = 'regist'; } });
-        }
-        break;
-        case 'restore':
-        {
-            TweenMax.to('#reset-pass-details', .3, { opacity: 0, onComplete: function() { 
-                TweenMax.set('#reset-pass-details', { display: 'none' }); 
-                TweenMax.set('#choice-action', { display: 'block' });
-                TweenMax.to('#choice-action', .3, { opacity: 1 });
-            } });
-            TweenMax.to('#form-restore', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-restore', { display: 'none' }); formState = 'regist'; } });
-        }
-        break;
-    }
-}
-
-function showResetPassForm() {
-    TweenMax.set('#form-restore', { display: 'block' });
-    TweenMax.to('#form-restore', .3, { opacity: 1, left: '0px' });
-    TweenMax.to('#choice-action', .3, { opacity: 0, onComplete: function() { 
-        TweenMax.set('#choice-action', { display: 'none' }); 
-        TweenMax.set('#reset-pass-details', { display: 'block' });
-        TweenMax.to('#reset-pass-details', .3, { opacity: 1 });
-    } });
-    switch (formState) {
-        case 'login':
-        {
-            TweenMax.to('#form-login', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-login', { display: 'none' }); formState = 'restore'; } });
-        }
-        break;
-        case 'regist':
-        {
-            TweenMax.to('#form-regis', .3, { opacity: 0, left: '-100px', onComplete: function() { TweenMax.set('#form-regis', { display: 'none' }); formState = 'restore'; } });
-        }
-        break;
-    }
-}
-
-//logic for form button goes here
-document.getElementById('btn-login').addEventListener('click', function() {
-    TweenMax.set('#menu-obj', { display: 'block'});
-    TweenMax.to('#menu-obj', 0.5, { opacity: 1 });
-    TweenMax.to('#home-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#home-obj', { display: 'none' }) }});
+// Check state if user scroll using mouse wheel or dragging the scroll bar
+$(window).scroll(function() {
+	var scTop = $(window).scrollTop();
+	if (scTop >= (document.getElementById('lp-top').offsetHeight / 2)) {
+		scrollBtnState = 'up';
+		document.getElementById('lp-link-top').style.display = 'block';
+		document.getElementById('lp-link-bottom').style.display = 'none';
+	} else {
+		scrollBtnState = 'down';
+		document.getElementById('lp-link-top').style.display = 'none';
+		document.getElementById('lp-link-bottom').style.display = 'block';
+	}
 });
 
-//default for menu page functions
-document.getElementById('box-01').addEventListener('click', function() {
-    TweenMax.set('#modul-obj', { display: 'block'});
-    TweenMax.to('#modul-obj', 0.5, { opacity: 1, backgroundColor: '#C0312B'});
-    TweenMax.to('#menu-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#menu-obj', { display: 'none' }) }});
-});
-
-document.getElementById('scroll-btn').addEventListener('click', function() {
-    TweenMax.to(window, 1, {scrollTo: { y: 700, autoKill: true }, ease: Power3.easeOut });
-});
-
-//default fot modul choose page functions
-document.getElementById('close-box').addEventListener('click', function() {
-    TweenMax.set('#menu-obj', { display: 'block'});
-    TweenMax.to('#menu-obj', 0.5, { opacity: 1 });
-    TweenMax.to('#modul-obj', 0.5, { opacity: 0, onComplete: function() { TweenMax.set('#modul-obj', { display: 'none' }) }});
-});
+// Select all links with hashes
+$('a[href*="#"]')
+	// Remove links that don't actually link to anything
+	.not('[href="#"]')
+	.not('[href="#0"]')
+	.click(function(event) {
+		// On-page links
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			// Figure out element to scroll to
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			// Does a scroll target exist?
+			if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({ scrollTop: target.offset().top }, 1000, function() {
+					// Callback after animation
+					// Must change focus!
+					var $target = $(target);
+					$target.focus();
+					if ($target.is(":focus")) { // Checking if the target was focused
+						return false;
+					} else {
+						$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+						$target.focus(); // Set focus again
+					};
+				});
+			}
+		}
+	});
