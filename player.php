@@ -20,7 +20,8 @@ $id = intval($_GET['id']);
 $type = intval($_GET['type']);
 
 $titles = array(
-	1 => "Pengelola LAPOR",
+	0 => "Pendahuluan",
+	"Pengelola LAPOR",
 	"Verifikasi Laporan",
 	"Lempar Laporan",
 	"Tunda & Konfirmasi Laporan",
@@ -76,7 +77,7 @@ $backLink = '<a href="modul.php?id=' . $id . '"><span class="mif-chevron-thin-le
 		<link href="css/main.min.css" rel="stylesheet">
 
     </head>
-    <body class="bg-white w-vw-100 h-vh-100">
+    <body class="bg-white w-vw-100 h-vh-100" style="overflow: hidden;">
 		<header id="lp-header-obj" class='lp-header op-black'>
 			<p class='h-100 d-flex flex-align-center' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='#lp-back-arrow'>
 				<span id='lp-back-arrow' class='pr-4 pl-3 h-100 d-flex flex-align-center'><?= $backLink ?></span>
@@ -84,9 +85,12 @@ $backLink = '<a href="modul.php?id=' . $id . '"><span class="mif-chevron-thin-le
 			</p>
 		</header>
 
-		<div id='lp-btn-header' class='op-black px-3 d-flex flex-align-center' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='span'>
+		<div id='lp-btn-header-left'></div>
+		<div id='lp-btn-header-right'></div>
+
+		<!-- <div id='lp-btn-header' class='op-black px-3 d-flex flex-align-center' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='span'>
 			<span class="mif-chevron-thin-down mif-3x fg-white"></span>
-		</div>
+		</div> -->
 
 		<?= $frame ?>
 

@@ -87,8 +87,18 @@ a, a:hover {
     font-family: 'BigNoodleTitling';
     color: #FFFFFF;
     float: left;
+    text-align: left;
+    border: unset;
     border-right: #FFFFFF solid 1px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+    .lp-title-box {
+        text-align: center;
+        border: unset;
+        border-bottom: #FFFFFF solid 1px;
+    }
 }
 
 .lp-form-error-box {
@@ -175,9 +185,20 @@ a, a:hover {
     align-items: center;
 }
 
-#lp-btn-header {
+#lp-btn-header-left {
     top: 0px;
     left: 0px;
+    width: calc(50% - 130px);
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+}
+
+#lp-btn-header-right {
+    top: 0px;
+    right: 0px;
+    width: calc(50% - 130px);
     height: 50px;
     position: absolute;
     opacity: 0;
@@ -269,10 +290,10 @@ a, a:hover {
     overflow: hidden;
     background-color: #d88a86;
     position: relative;
+    padding-top: 40px;
 }
 
 .lp-bottom-title {
-    top: 0px;
     width: 100%;
     height: 80px;
     display: flex;
@@ -316,7 +337,40 @@ a, a:hover {
 .lp-squere-250 {
     width: 250px;
     height: 250px;
+    margin: 0;
     position: relative;
+}
+
+.lp-squere-250 > div {
+    margin: 0;
+}
+
+.lp-squere-250 > div > span.lp-red-text {
+    text-align: left;
+}
+
+.lp-border-player {
+    border: unset !important;
+    border-right: 1px solid #fff !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .lp-squere-250 {
+        margin: 0 auto;
+    }
+
+    .lp-squere-250 > div {
+        margin: 0 auto;
+    }
+
+    .lp-squere-250 > div > span.lp-red-text {
+        text-align: center;
+    }
+
+    .lp-border-player {
+        border: unset !important;
+        border-bottom: 1px solid #fff !important;
+    }
 }
 
 .lp-position-top {

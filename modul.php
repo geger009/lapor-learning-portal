@@ -21,7 +21,7 @@ $id = intval($_GET['id']);
 $learningLink = '';
 $videoLink = '';
 
-if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
+if (($id == 0) || ($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 	$learningLink = '<a class="lp-red-text" href="player.php?id=' . $id .'&type=1">E-Learning</a>';
 	$videoLink = '<a class="lp-red-text" href="player.php?id=' . $id .'&type=2">Video</a>';
 } else {
@@ -59,14 +59,14 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 
 	</head>
 
-    <?php if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)): ?>
+    <?php if (($id == 0) || ($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)): ?>
         <body class='lp-yellow-background'>
     <?php else: ?>
         <body>
     <?php endif; ?>
 		<header class='lp-header' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='.lp-header-items-box'>
 			<div class='lp-header-items-box px-4'>
-                <?php if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)): ?>
+                <?php if (($id == 0) || ($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)): ?>
 				    <a href="home.php"><span class="mif-cross mif-3x lp-red-text"></span></a>
                 <?php else: ?>
 				    <a href="home.php"><span class="mif-cross mif-3x fg-white"></span></a>
@@ -77,8 +77,14 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 		<div class='d-flex flex-align-center flex-justify-center w-100 h-vh-100'>
 			<div class='row px-0-md px-5-sm'>
 				<div class='cell'>
-					<?php if($id === 1): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+					<?php if($id === 0): ?>
+						<div class='lp-squere-250 lp-border-player'>
+							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
+								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 30px; font-weight: bold;">Pendahuluan</span>
+							</div>
+						</div>
+					<?php elseif($id === 1): ?>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-01.png" class="h-75">
 							</div>
@@ -87,7 +93,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 2): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-02.png" class="h-75">
 							</div>
@@ -96,7 +102,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 3): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-03.png" class="h-75">
 							</div>
@@ -105,7 +111,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 4): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-04.png" class="h-75">
 							</div>
@@ -114,31 +120,31 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 5): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 36px; font-weight: bold;">TINDAK LANJUT LAPORAN</span>
 							</div>
 						</div>
 					<?php elseif($id === 6): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 28px; font-weight: bold;">Terima atau tolak permintaan intansi dibawahnya</span>
 							</div>
 						</div>
 					<?php elseif($id === 7): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 32px; font-weight: bold;">"PERMINTAAN BUKAN WEWENANG"</span>
 							</div>
 						</div>
 					<?php elseif($id === 8): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 36px; font-weight: bold;">TAHAN DAN LEPAS LAPORAN</span>
 							</div>
 						</div>
 					<?php elseif($id === 9): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-05.png" class="h-75">
 							</div>
@@ -147,31 +153,31 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 10): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 46px; font-weight: bold;">Teruskan Laporan</span>
 							</div>
 						</div>
 					<?php elseif($id === 11): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 36px; font-weight: bold;">Tutup & Buka Laporan</span>
 							</div>
 						</div>
 					<?php elseif($id === 12): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 36px; font-weight: bold;">Akses Data Statistik</span>
 							</div>
 						</div>
 					<?php elseif($id === 13): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 								<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 36px; font-weight: bold;">Unduh Data Laporan (Reporting)</span>
 							</div>
 						</div>
 					<?php elseif($id === 14): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-06.png" class="h-75">
 							</div>
@@ -180,7 +186,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 15): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-07.png" class="h-75">
 							</div>
@@ -189,7 +195,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 16): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-08.png" class="h-75">
 							</div>
@@ -198,7 +204,7 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 							</div>
 						</div>
 					<?php elseif($id === 17): ?>
-						<div class='lp-squere-250 border-right border-solid bd-white'>
+						<div class='lp-squere-250 lp-border-player'>
 							<div class="w-100 h-75 d-flex flex-align-center flex-justify-center">
 								<img src="images/icn-09.png" class="h-75">
 							</div>
@@ -213,9 +219,6 @@ if (($id >= 5 && $id <= 8) || ($id >= 10 && $id <= 13)) {
 						<div data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='p'>
 							<p class='p-2' style="font-family: 'Roboto'; font-size: 42px;">
 								<?= $learningLink ?>
-							</p>
-							<p class='p-2' style="font-family: 'Roboto'; font-size: 42px;">
-								<?= $videoLink ?>
 							</p>
 						</div>
 					</div>

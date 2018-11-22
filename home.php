@@ -73,6 +73,11 @@ $user = getUsername();
 			</div>
 			<div class='lp-bottom-menu-container'>
 				<div class='tiles-grid size-fs-2 size-sm-3 size-md-5 mx-auto' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='a'>
+					<a href="modul.php?id=0" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 20px; font-weight: bold;">Pendahuluan</span>
+						</div>
+					</a>
 					<a href="modul.php?id=1" data-role="tile" class="lp-red-background fg-white" data-size="medium">
 						<div class="w-100 d-flex flex-align-center flex-justify-center" style="height: 65%;">
 							<img src="images/icn-01.png" class="h-75">
@@ -110,9 +115,9 @@ $user = getUsername();
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 24px; font-weight: bold;">TINDAK LANJUT LAPORAN</span>
 						</div>
 					</a>
-					<a href="modul.php?id=6" data-role="tile" class="lp-yellow-background lp-red-text" data-size="wide">
+					<a href="modul.php?id=6" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-3 py-1 d-flex flex-align-center flex-justify-center">
-							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 20px; font-weight: bold;">Terima atau tolak permintaan intansi dibawahnya</span>
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">Terima atau tolak permintaan intansi dibawahnya</span>
 						</div>
 					</a>
 					<a href="modul.php?id=7" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
