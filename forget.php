@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class='row'>
 					<div class='cell-sm-8'>
 						<div class='lp-title-box d-flex flex-align-center'>
-							<p>PANDUAN LAPOR</p>
+							<p>PANDUAN LAPOR!</p>
 						</div>
 					</div>
 					<div class='cell-sm-4'>

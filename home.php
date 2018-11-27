@@ -52,16 +52,16 @@ $user = getUsername();
 		</header>
 		<div id='lp-top' class='lp-top-container'>
 			<div class='lp-top-box'>
-				<p>PANDUAN LAPOR</p>
+				<p>PANDUAN LAPOR!</p>
 				<div class="row">
 					<div class="cell-sm-4">
 						<div class="lp-welcome-box">
-							<p>Selamat datang di<br>Portal E-Learning LAPOR</p>
+							<p>Selamat datang di<br>Portal E-Learning LAPOR!</p>
 						</div>
 					</div>
 					<div class="cell-sm-8">
 						<div class="lp-description-box">
-						<p>Portal E-Learning LAPOR menyediakan modul-modul pembelajaran bagi Admin Instansi dan Pejabat Penghubung mengenai cara mengelola laporan masyarakat pada sistem LAPOR.</p>
+						<p>Portal E-Learning LAPOR! menyediakan modul-modul pembelajaran bagi Admin Instansi dan Pejabat Penghubung mengenai cara mengelola laporan masyarakat pada sistem LAPOR!.</p>
 						</div>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ $user = getUsername();
 			</div>
 			<div class='lp-bottom-menu-container'>
 				<div class='tiles-grid size-fs-2 size-sm-3 size-md-5 mx-auto' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='a'>
-					<a href="modul.php?id=0" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+					<a href="modul.php?id=0" data-role="tile" class="lp-white-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 20px; font-weight: bold;">Pendahuluan</span>
 						</div>
@@ -83,7 +83,7 @@ $user = getUsername();
 							<img src="images/icn-01.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Pengelola LAPOR</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Pengelola LAPOR!</span>
 						</div>
 					</a>
 					<a href="modul.php?id=2" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -91,7 +91,7 @@ $user = getUsername();
 							<img src="images/icn-02.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Verifikasi Laporan</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Verifikasi Laporan</span>
 						</div>
 					</a>
 					<a href="modul.php?id=3" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -99,7 +99,7 @@ $user = getUsername();
 							<img src="images/icn-03.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Lempar Laporan</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Lempar Laporan</span>
 						</div>
 					</a>
 					<a href="modul.php?id=4" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -107,27 +107,27 @@ $user = getUsername();
 							<img src="images/icn-04.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Tunda & Konfirmasi Laporan</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Tunda dan Konfirmasi Laporan</span>
 						</div>
 					</a>
-					<a href="modul.php?id=5" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+					<a href="modul.php?id=5" data-role="tile" class="lp-white-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
-							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 24px; font-weight: bold;">TINDAK LANJUT LAPORAN</span>
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 24px; font-weight: bold;">Tindak Lanjut Laporan</span>
 						</div>
 					</a>
-					<a href="modul.php?id=6" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+					<a href="modul.php?id=6" data-role="tile" class="lp-white-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-3 py-1 d-flex flex-align-center flex-justify-center">
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">Terima atau tolak permintaan intansi dibawahnya</span>
 						</div>
 					</a>
-					<a href="modul.php?id=7" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+					<a href="modul.php?id=7" data-role="tile" class="lp-white-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
-							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">"PERMINTAAN BUKAN WEWENANG"</span>
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">Permintaan Bukan Wewenang</span>
 						</div>
 					</a>
-					<a href="modul.php?id=8" data-role="tile" class="lp-yellow-background lp-red-text" data-size="medium">
+					<a href="modul.php?id=8" data-role="tile" class="lp-white-background lp-red-text" data-size="medium">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
-							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">TAHAN DAN LEPAS LAPORAN</span>
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 18px; font-weight: bold;">Tahan dan Lepas Laporan</span>
 						</div>
 					</a>
 					<a href="modul.php?id=9" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -135,25 +135,25 @@ $user = getUsername();
 							<img src="images/icn-05.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Arsipkan Laporan</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Arsipkan Laporan</span>
 						</div>
 					</a>
-					<a href="modul.php?id=10" data-role="tile" class="lp-yellow-background lp-red-text" data-size="small">
+					<a href="modul.php?id=10" data-role="tile" class="lp-white-background lp-red-text" data-size="small">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 11px;">Teruskan Laporan</span>
 						</div>
 					</a>
-					<a href="modul.php?id=11" data-role="tile" class="lp-yellow-background lp-red-text" data-size="small">
+					<a href="modul.php?id=11" data-role="tile" class="lp-white-background lp-red-text" data-size="small">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
-							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 11px;">Tutup & Buka Laporan</span>
+							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 11px;">Tutup dan Buka Laporan</span>
 						</div>
 					</a>
-					<a href="modul.php?id=12" data-role="tile" class="lp-yellow-background lp-red-text col-md-1 row-md-6" data-size="small">
+					<a href="modul.php?id=12" data-role="tile" class="lp-white-background lp-red-text col-md-1 row-md-6" data-size="small">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 11px;">Akses Data Statistik</span>
 						</div>
 					</a>
-					<a href="modul.php?id=13" data-role="tile" class="lp-yellow-background lp-red-text col-md-2 row-md-6" data-size="small">
+					<a href="modul.php?id=13" data-role="tile" class="lp-white-background lp-red-text col-md-2 row-md-6" data-size="small">
 						<div class="w-100 h-100 px-2 py-1 d-flex flex-align-center flex-justify-center">
 							<span class="lp-red-text" style="font-family: 'Roboto'; font-size: 11px;">Unduh Data Laporan (Reporting)</span>
 						</div>
@@ -163,7 +163,7 @@ $user = getUsername();
 							<img src="images/icn-06.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Buat Laporan Manual</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Buat Laporan Manual</span>
 						</div>
 					</a>
 					<a href="modul.php?id=15" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -171,7 +171,7 @@ $user = getUsername();
 							<img src="images/icn-07.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Buat Laporan dari Twitter</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Buat Laporan dari Twitter</span>
 						</div>
 					</a>
 					<a href="modul.php?id=16" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -179,7 +179,7 @@ $user = getUsername();
 							<img src="images/icn-08.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Manajemen Pengguna</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Manajemen Pengguna</span>
 						</div>
 					</a>
 					<a href="modul.php?id=17" data-role="tile" class="lp-red-background fg-white" data-size="medium">
@@ -187,7 +187,7 @@ $user = getUsername();
 							<img src="images/icn-09.png" class="h-75">
 						</div>
 						<div class="w-100 px-2 py-1 d-flex flex-align-center flex-justify-center" style="height: 35%;">
-							<span class="fg-white" style="font-family: 'Roboto'; font-size: 14px;">Manajemen Instansi</span>
+							<span class="lp-yellow-text" style="font-family: 'Roboto'; font-size: 14px;">Manajemen Instansi</span>
 						</div>
 					</a>
 				</div>
