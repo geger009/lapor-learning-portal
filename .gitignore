@@ -1,5 +1,6 @@
 # macOS Fork
 *.DS_Store
+*.1.php
 
 # spesifik folder
-learning/
+content/

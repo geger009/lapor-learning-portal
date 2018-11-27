@@ -7,6 +7,6 @@ function redirect($path) {
         $protocol = 'http';
     }
 
-    header("Location: $protocol://" . $_SERVER['HTTP_HOST'] . "/lapor-portal" . $path);
+    header("Location: $protocol://" . $_SERVER['HTTP_HOST'] . "/lapor" . $path);
     exit;
 }

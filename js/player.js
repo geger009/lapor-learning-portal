@@ -21,7 +21,7 @@ playerObj.showHeader = function() {
 
     if (playerObj.animationBtnRunning == false) {
         playerObj.animationBtnRunning = true;
-        document.getElementById('lp-btn-header').style.cursor = 'default';
+        //document.getElementById('lp-btn-header').style.cursor = 'default';
         playerObj.hideButton();
     }
 
@@ -46,7 +46,7 @@ playerObj.hideHeader = function() {
 }
 
 playerObj.showButton = function() {
-    var btnHeader = document.getElementById('lp-btn-header');
+    /*var btnHeader = document.getElementById('lp-btn-header');
     var opBtn = parseFloat($(btnHeader).css('opacity'));
 
     if (opBtn < 1) {
@@ -59,11 +59,19 @@ playerObj.showButton = function() {
         btnHeader.style.cursor = 'pointer';
         playerObj.animationRunning = false;
         playerObj.animationBtnRunning = false;
-    }
+    }*/
+
+    $('#lp-btn-header-left').show();
+    $('#lp-btn-header-right').show();
+
+    setTimeout(function() {
+        playerObj.animationRunning = false;
+        playerObj.animationBtnRunning = false;
+    }, 300);
 }
 
 playerObj.hideButton = function() {
-    var btnHeader = document.getElementById('lp-btn-header');
+    /*var btnHeader = document.getElementById('lp-btn-header');
     var opBtn = parseFloat($(btnHeader).css('opacity'));
 
     if (opBtn > 0) {
@@ -72,14 +80,29 @@ playerObj.hideButton = function() {
         setTimeout(function() {
             playerObj.hideButton();
         }, 50);
-    }
+    }*/
+
+    $('#lp-btn-header-left').hide();
+    $('#lp-btn-header-right').hide();
 }
 
 setTimeout(function() {
     playerObj.hideHeader();
 }, 2000);
 
-document.getElementById('lp-btn-header').addEventListener('click', function() {
+/*document.getElementById('lp-btn-header').addEventListener('click', function() {
+    if (playerObj.animationRunning) return;
+    playerObj.animationRunning = true;
+    playerObj.showHeader();
+});*/
+
+document.getElementById('lp-btn-header-left').addEventListener('mouseover', function() {
+    if (playerObj.animationRunning) return;
+    playerObj.animationRunning = true;
+    playerObj.showHeader();
+});
+
+document.getElementById('lp-btn-header-right').addEventListener('mouseover', function() {
     if (playerObj.animationRunning) return;
     playerObj.animationRunning = true;
     playerObj.showHeader();

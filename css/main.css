@@ -57,7 +57,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #C0312B;
+    background-color: #af0000;
 }
 
 a, a:hover {
@@ -87,8 +87,18 @@ a, a:hover {
     font-family: 'BigNoodleTitling';
     color: #FFFFFF;
     float: left;
+    text-align: left;
+    border: unset;
     border-right: #FFFFFF solid 1px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+    .lp-title-box {
+        text-align: center;
+        border: unset;
+        border-bottom: #FFFFFF solid 1px;
+    }
 }
 
 .lp-form-error-box {
@@ -97,7 +107,7 @@ a, a:hover {
     left: 0;
     font-size: 12px;
     font-family: 'Roboto';
-    color: #C0312B;
+    color: #af0000;
     background-color: #FFFFFF;
     padding: 5px;
     margin-top: 15px;
@@ -109,7 +119,7 @@ a, a:hover {
 }
 
 .lp-form-error-box > p > a {
-    color: #C0312B;
+    color: #af0000;
     text-decoration: none;
 }
 
@@ -144,7 +154,7 @@ a, a:hover {
     height: 50px;
     font-size: 20px;
     font-family: 'Roboto';
-    color: #C0312B;
+    color: #af0000;
     background-color: #FFFFFF;
     border: none;
     border-radius: 25px;
@@ -152,7 +162,7 @@ a, a:hover {
 }
 
 .lp-button-large:hover {
-    color: rgb(156, 39, 35);
+    color: #8a0000;
     background-color: rgb(216, 216, 216);
 }
 
@@ -175,9 +185,20 @@ a, a:hover {
     align-items: center;
 }
 
-#lp-btn-header {
+#lp-btn-header-left {
     top: 0px;
     left: 0px;
+    width: calc(50% - 130px);
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+}
+
+#lp-btn-header-right {
+    top: 0px;
+    right: 0px;
+    width: calc(50% - 130px);
     height: 50px;
     position: absolute;
     opacity: 0;
@@ -193,7 +214,7 @@ a, a:hover {
 }
 
 .lp-greet-text {
-    color: #C0312B;
+    color: #af0000;
     font-size: 18px;
     font-family: 'Roboto';
     margin-right: 10px;
@@ -206,7 +227,7 @@ a, a:hover {
     font-size: 16px;
     font-family: 'Roboto';
     color: #FFFFFF;
-    background-color: #C0312B;
+    background-color: #af0000;
     border: none;
     border-radius: 20px;
     margin-right: 10px;
@@ -214,7 +235,7 @@ a, a:hover {
 
 .lp-button-100:hover {
     color: rgb(216, 216, 216);
-    background-color: rgb(156, 39, 35);
+    background-color: #8a0000;
 }
 
 .lp-top-container {
@@ -237,7 +258,7 @@ a, a:hover {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 50px;
-    color: #C0312B;
+    color: #af0000;
     font-family: 'BigNoodleTitling';
 }
 
@@ -245,7 +266,7 @@ a, a:hover {
     width: 100%;
     max-width: 300px;
     height: 100%;
-    color: #C0312B;
+    color: #af0000;
     float: left;
     line-height: 30px;
     font-size: 22px;
@@ -257,7 +278,7 @@ a, a:hover {
     width: 100%;
     max-width: 550px;
     height: 100%;
-    color: #333333;
+    color: #282828;
     float: right;
     line-height: 30px;
     font-size: 18px;
@@ -269,10 +290,10 @@ a, a:hover {
     overflow: hidden;
     background-color: #d88a86;
     position: relative;
+    padding-top: 40px;
 }
 
 .lp-bottom-title {
-    top: 0px;
     width: 100%;
     height: 80px;
     display: flex;
@@ -316,7 +337,60 @@ a, a:hover {
 .lp-squere-250 {
     width: 250px;
     height: 250px;
+    margin: 0;
     position: relative;
+}
+
+.lp-squere-250 > div {
+    margin: 0;
+}
+
+.lp-squere-250 > div > span.lp-red-text {
+    text-align: left;
+}
+
+.lp-border-player {
+    border: unset !important;
+    border-right: 1px solid #fff !important;
+}
+
+.lp-border-player-red {
+    border: unset !important;
+    border-right: 1px solid #af0000 !important;
+}
+
+.lp-border-player-yellow {
+    border: unset !important;
+    border-right: 1px solid #fef30d !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .lp-squere-250 {
+        margin: 0 auto;
+    }
+
+    .lp-squere-250 > div {
+        margin: 0 auto;
+    }
+
+    .lp-squere-250 > div > span.lp-red-text {
+        text-align: center;
+    }
+
+    .lp-border-player {
+        border: unset !important;
+        border-bottom: 1px solid #fff !important;
+    }
+    
+    .lp-border-player-red {
+        border: unset !important;
+        border-bottom: 1px solid #af0000 !important;
+    }
+    
+    .lp-border-player-yellow {
+        border: unset !important;
+        border-bottom: 1px solid #fef30d !important;
+    }
 }
 
 .lp-position-top {
@@ -336,17 +410,25 @@ a, a:hover {
 }
 
 .lp-red-background {
-    background-color: #C0312B;
+    background-color: #af0000;
 }
 
 .lp-yellow-background {
-    background-color: #f7c966;
+    background-color: #fef30d;
+}
+
+.lp-white-background {
+    background-color: white;
 }
 
 .lp-red-text {
-    color: #C0312B !important;
+    color: #af0000 !important;
 }
 
 .lp-yellow-text {
-    color: #f7c966 !important;
+    color: #fef30d !important;
+}
+
+.lp-white-text {
+    color: white !important;
 }
