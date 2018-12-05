@@ -20,30 +20,30 @@ $id = intval($_GET['id']);
 $type = intval($_GET['type']);
 
 $titles = array(
-	0 => "Pendahuluan",
-	"Pengelola LAPOR!",
-	"Verifikasi Laporan",
-	"Lempar Laporan",
-	"Tunda dan Konfirmasi Laporan",
-	"Tindak Lanjut Laporan",
-	"Terima atau tolak permintaan intansi dibawahnya",
-	"Permintaan Bukan Wewenang",
-	"Tahan dan Lepas Laporan",
-	"Arsipkan Laporan",
-	"Teruskan Laporan",
-	"Tutup dan Buka Laporan",
-	"Akses Data Statistik",
-	"Unduh Data Laporan (Reporting)",
-	"Buat Laporan Manual",
-	"Buat Laporan dari Twitter",
-	"Manajemen Pengguna",
-	"Manajemen Instansi"
+	0 => ["Pendahuluan", 0],
+	["Pengelola LAPOR!", 1],
+	["Verifikasi Laporan", 2],
+	["Lempar Laporan", 3],
+	["Tunda dan Konfirmasi Laporan", 4],
+	["Tindak Lanjut Laporan", 6],
+	["Terima atau tolak permintaan intansi dibawahnya", 11],
+	["Permintaan Bukan Wewenang", 8],
+	["Tahan dan Lepas Laporan", 9],
+	["Arsipkan Laporan", 5],
+	["Teruskan Laporan", 7],
+	["Tutup dan Buka Laporan", 10],
+	["Akses Data Statistik", 15],
+	["Unduh Data Laporan (Reporting)", 14],
+	["Buat Laporan Manual", 12],
+	["Buat Laporan dari Twitter", 13],
+	["Manajemen Pengguna", 16],
+	["Manajemen Instansi", 17]
 );
 
 if ($type == 1) {
-    $frame = '<iframe src="content/el/mod_' . $id . '/index.html" scrolling="no" id="frmContent" class="w-100 h-100 border-none"></iframe>';
+    $frame = '<iframe src="content/el/mod_' . $titles[$id][1] . '/index.html" scrolling="no" id="frmContent" class="w-100 h-100 border-none"></iframe>';
 } else if ($type == 2) {
-    $frame = '<iframe src="content/vd/mod_' . $id . '/index.html" scrolling="no" id="frmContent" class="w-100 h-100 border-none"></iframe>';
+    $frame = '<iframe src="content/vd/mod_' . $titles[$id][1] . '/index.html" scrolling="no" id="frmContent" class="w-100 h-100 border-none"></iframe>';
 }
 
 $backLink = '<a href="modul.php?id=' . $id . '"><span class="mif-chevron-thin-left mif-3x fg-white"></span></a>';
@@ -81,7 +81,7 @@ $backLink = '<a href="modul.php?id=' . $id . '"><span class="mif-chevron-thin-le
 		<header id="lp-header-obj" class='lp-header op-black'>
 			<p class='h-100 d-flex flex-align-center' data-role='ripple' data-ripple-color='#ffffff' data-ripple-target='#lp-back-arrow'>
 				<span id='lp-back-arrow' class='pr-4 pl-3 h-100 d-flex flex-align-center'><?= $backLink ?></span>
-				<span class='fg-white text-ellipsis mr-2' style="font-family: 'Roboto'; font-size: 20px;"><?= $titles[$id] ?></span>
+				<span class='fg-white text-ellipsis mr-2' style="font-family: 'Roboto'; font-size: 20px;"><?= $titles[$id][0] ?></span>
 			</p>
 		</header>
 
